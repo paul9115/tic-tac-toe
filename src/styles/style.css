@@ -28,6 +28,16 @@ code {
   grid-template: repeat(3, 1fr)/repeat(3, 1fr);
 }
 
+@media(max-width: 500px) {
+  .board {
+    width: 300px;
+    height: 300px;
+  }
+  .steps {
+    box-sizing: content-box;
+    height: 40px;
+  }
+}
 .moves {
   width: 200px;
   margin: 20px auto;
