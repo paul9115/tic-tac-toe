@@ -16,7 +16,9 @@ const Game = () => {
         if(winner || squares[i]) return null;
         squares[i] = 'X';
         setHistory([...timeInHistory, squares]);
-        squares[cpuPlayer(squares)] = 'O';
+        if(!calculateWinner(squares)) {
+            squares[cpuPlayer(squares)] = 'O';
+        }
         setStepNumber(timeInHistory.length);
     }
 
