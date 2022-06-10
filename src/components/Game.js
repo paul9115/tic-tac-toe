@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {calculateWinner} from "../helpers";
+import {calculateWinner, cpuPlayer} from "../helpers";
 import Board from "./Board";
 import '../styles/style.css'
 
@@ -14,9 +14,9 @@ const Game = () => {
         const current = timeInHistory[stepNumber];
         const squares = [...current]
         if(winner || squares[i]) return null;
-        squares[i] = xIsNext ? 'X' : 'O';
+        squares[i] = 'X';
         setHistory([...timeInHistory, squares]);
-        setXIsNext(!xIsNext);
+        squares[cpuPlayer(squares)] = 'O';
         setStepNumber(timeInHistory.length);
     }
 
