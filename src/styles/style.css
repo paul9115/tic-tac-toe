@@ -27,7 +27,14 @@ code {
   display: grid;
   grid-template: repeat(3, 1fr)/repeat(3, 1fr);
 }
-
+.square {
+  background: darkslategray;
+  border: 2px solid black;
+  font-size: 90px;
+  font-weight: 800;
+  cursor: pointer;
+  outline: none;
+}
 @media(max-width: 500px) {
   .board {
     width: 300px;
@@ -37,19 +44,15 @@ code {
     box-sizing: content-box;
     height: 40px;
   }
+  .square {
+    font-size: 70px;
+    font-weight: 600;
+  }
 }
 .moves {
   width: 200px;
   margin: 20px auto;
 
-}
-.square {
-  background: darkslategray;
-  border: 2px solid black;
-  font-size: 90px;
-  font-weight: 800;
-  cursor: pointer;
-  outline: none;
 }
 li {
   display: flex;
